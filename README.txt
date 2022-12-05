@@ -1,4 +1,10 @@
-# julia-walti.github.io/Ada_Project_Site
+Website for the EPFL Ada Course - Fall 2022 - Team xxdatasiencesxx
+
+Accessible at: 
+
+	julia-walti.github.io/Ada_Project_Site
+
+
 
 Credits:
 	Story by HTML5 UP
