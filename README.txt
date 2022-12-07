@@ -6,13 +6,18 @@ Accessible at:
 
 
 Info for interactive graphs: (methods from file:///home/julia/Bureau/Ma3/Ada/Projet/Ada_Project_Site/index.html)
-import chart_studio
-import chart_studio.tools as tls
-import chart_studio.plotly as py
-username = 'DataSIEences'
-api_key = 'EfOtiBzCzg7flTtF9JmC'
-chart_studio.tools.set_credentials_file(username=username, api_key=api_key)
-py.plot(fig, filename = 'test_fig2', auto_open=False) # Gives url of plot, fig is name of wanted plot
+    IN NOTEBOOK:
+	import chart_studio
+	import chart_studio.tools as tls
+	import chart_studio.plotly as py
+	username = 'DataSIEences'
+	api_key = 'EfOtiBzCzg7flTtF9JmC'
+	chart_studio.tools.set_credentials_file(username=username, api_key=api_key)
+	py.plot(fig, filename = 'test_fig2', auto_open=False) 
+		Gives url of plot, fig is name of wanted plot
+    IN HTML: 
+    	<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~elizabethts/9.embed" height="525" width="100%"></iframe> 
+		Change the url with the one obtained in notebook
 
 Credits:
 	Story by HTML5 UP
