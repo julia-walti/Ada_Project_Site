@@ -6,7 +6,7 @@ Accessible at:
 
 
 Info for interactive graphs: (methods from file:///home/julia/Bureau/Ma3/Ada/Projet/Ada_Project_Site/index.html)
-    IN NOTEBOOK:
+    IN NOTEBOOK (private bc info on plotly account):
 	import chart_studio
 	import chart_studio.tools as tls
 	import chart_studio.plotly as py
