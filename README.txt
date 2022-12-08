@@ -3,7 +3,10 @@ Website for the EPFL Ada Course - Fall 2022 - Team xxdatasiencesxx
 Accessible at: 
 
 	julia-walti.github.io/Ada_Project_Site
-
+	
+	
+Documentation template: 
+	https://html5up.net/story
 
 Info for interactive graphs: (methods from file:///home/julia/Bureau/Ma3/Ada/Projet/Ada_Project_Site/index.html)
     IN NOTEBOOK (private bc info on plotly account):
@@ -18,6 +21,8 @@ Info for interactive graphs: (methods from file:///home/julia/Bureau/Ma3/Ada/Pro
     IN HTML: 
     	<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~elizabethts/9.embed" height="525" width="100%"></iframe> 
 		Change the url with the one obtained in notebook
+
+
 
 Credits:
 	Story by HTML5 UP
