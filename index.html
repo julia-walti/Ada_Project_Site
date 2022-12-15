@@ -57,13 +57,7 @@
 						</div>
 					</section>
 
-					<section class="wrapper style1 align-center" id="start">
-						<div class="inner">
-							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/1/" height="500" width="1000"></iframe>
-							<p>Texte sur la gallerie, infos générale: Does the proportion of movies with women in the crew change with time ? Is there a difference in the role distribution for different ethnicities/genders time-wise?</p>
-						</div>
-					</section>
-
+					
 				<!-- Two -->
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
@@ -72,8 +66,7 @@
 							<p>What are the most recurrent adjectives, verbs (actions) for each ethnicity/genre character ? Does it change in time? Can we draw the stereotyped character for each ethnicity in Hollywood ?</p>
 						</div>
 						<div class="image">
-							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/1/" height="500" width="1000"></iframe> 
-							
+							<img src="images/yellow.png" alt="" />							
 						</div>
 					</section>
 				
@@ -84,34 +77,108 @@
 							<p>Are movies genres and ethnicity/gender related?</p>
 						</div>
 						<div class="image">
-							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/1/" height="500" width="1000"></iframe>
+							<img src="images/yellow.png" alt="" />
 						</div>
 					</section>
 
 				<!-- Four -->
 				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 					<div class="content">
-						<h2>Revenue</h2>
-						<p>Is there a noticeable difference in revenue for movies that portray some particular ethnicities/genre? Is there a noticeable difference in revenue for movies created by women ?</p>
+						<h2>Proportion of women in the crew </h2>
+						<p>Next, let’s look at the proportion of women writers and directors. There are a lot of directors and writers for one movie. In the dataset used, 94, 02 % of movies were directed and 95,80 % written by only men. There were no movies that were written or directed by only women. If we merge the crew information, there are 7,78 % movies that have at least one woman in the crew.
+						</p>
+						<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/13/" height="500" width="1000"></iframe>
+						<p>Thus, with no surprise, the distributions of movies created by only men or by a crew containing at least one women are significantly different (Mann-Whitney p-value of 5e-20). Moreover, even if the proportion of women in movie crews has change since the 1920’s, is has been stationnary since 1985 (AD Fuller p-value of 0.0002). </p>
 					</div>
 					<div class="image">
-						<img src="images/spotlight01.jpg" alt="" />
+						<img src="images/yellow.png" alt="" />
 					</div>
 				</section>
 
-				
+				<!-- Five a -->
+				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
+					<div class="content">
+						<h2>Revenue</h2>
+						<p>As seen earlier, women make up a very small portion of writers and directors and the minority of main characters. Maybe it is because movies created by women or portraying them are less successful ? The CMU Movies dataset contains reliable revenue information. Hence, we studied the difference in the revenue for movies created by women or portraying them. It would be best to have a balanced dataset to do statistical tests. Hence a matching procedure on the budget, year of release, score and the genre of the movie has been done. As you can see in the following graphs, these features can have a big impact on the revenue. Budget is significantly correlated to revenue but not to the gender of the crew 				
+						</p>
+						<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/19/" height="500" width="1000"></iframe>
+					</div>
+					<div class="image">
+						<img src="images/yellow.png" alt="" />
+					</div>
+				</section>
 
+				<!-- Five b -->
+				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
+					<div class="content">
+						<h3>In terms of main character gender</h3>
+						<p>			
+						</p>
+
+					</div>
+					<div class="image">
+						<img src="images/yellow.png" alt="" />
+					</div>
+				</section>
+
+				<!-- Five c -->
+				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
+					<div class="content">
+						<h3>In terms of the gender crew</h3>
+						<p>First, with raw distributions of revenue, movies made by a mixed crew do not seem to have smaller revenue, even though the highest grossing ones are made by men.  
+						</p>
+						<p>After matching, with a balanced dataset, the distributions have slightly changed. Indeed, the highest grossing movie is now created by a crew containing a woman. However, statistical show that we cannot reject the hypothesis that the distributions are different (Mann-Whitney U p-value of 0.9).
+						</p>
+						<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/21/" height="500" width="1000"></iframe>
+						<p>So, women do make successful movies, the reason for their absence in crews must come from something else. 
+						</p>
+					</div>
+					<div class="image">
+						<img src="images/yellow.png" alt="" />
+					</div>
+				</section>
+
+				<!-- Five d -->
+				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
+					<div class="content">
+						<h3>Prediction of the revenue</h3>
+						<p>Finally, to tie this whole part, an ordinary least square regression has been computed to predict the revenue and look at the impact of each feature:
+						</p>
+						<ul>
+							<li>Main character white or not ?</li>
+							<li>Gender of the main character ?</li>
+							<li>Does the crew contain a woman ?</li>
+							<li>Year of release</li>
+							<li>Score </li>
+							<li>Runtime </li>
+							<li>Budget </li>
+							<li>Genre of the movie (as categorical variable for each genre) </li>
+						</ul>
+						<p>The coefficients can give us information about the impact of one variable on the revenue. As we want statistically significant results, we only discuss coefficients that have a p-value under 0.05. The budget, year of release, runtime, genre_Action and genre_Animation have positive coefficients. Meaning that if they are bigger, the revenue is too. According to our model, to make a high grossing movie, you need to make a long animation or action movie with a big budget and release it now. 
+						</p>
+						<p>The resulting regression has a R-square value of 0.41, which means that some features that could explain the revenue better are missing. For instance, the notoriety of the actors. 
+						</p>
+					</div>
+					<div class="image">
+						<img src="images/yellow.png" alt="" />
+					</div>
+				</section>
+
+				<!-- Conclusion -->
+					<section class="wrapper style1 align-center" id="start">
+						<div class="inner">
+							<h2> Conlusion </h2>
+							<p>
+
+							</p>
+						</div>
+					</section>
 
 				
 				<!-- Footer -->
 					<footer class="wrapper style1 align-center">
 						<div class="inner">
-							<ul class="icons">
-								<li><a href="#" class="icon brands style2 fa-"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
-							</ul>
-							<p>&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+							
 						</div>
 					</footer>
 
