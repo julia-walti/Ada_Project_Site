@@ -69,12 +69,44 @@
 							<img src="images/yellow.png" alt="" />							
 						</div>
 					</section>
+
+
 				
-				<!-- Three -->
+				<!-- Three a -->
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
-							<h2>Movie Genres and Gender of actors</h2>
-							<p>Are movies genres and ethnicity/gender related?</p>
+							<h2>Are movies genres and gender of the lead role related?</h2>
+							<p>Let’s see if  the gender of the main actor of a movie and its genre are correlated. We want to answer questions of the following type: “Are men more likely to star in Action movies than women?”. 
+							Let us look at how many movies per movie genre we have in our dataset. 
+							</p>
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/35/" height="500" width="1000"></iframe>
+							<p> Some movie genres don’t have enough movies in our dataset for us to make reliable analysis or conclusions on them. Hence, for our analysis, we will drop the following movie genres: Family, Fantasy, History, Music, Musical, Mystery, Romance, Science Fiction, Sport, Thriller, Western. Hence, the results of our study only apply to Action, Adventure, Animation, Biography, Comedy, Crime, Drama and Horror movies.
+							</p>
+							<p>Next, let us look at the relationship between the gender of the protagonist and the genre of the movie.								
+							</p>
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/68/" height="500" width="1000"></iframe>
+							<p>	A first look at our data suggests male actors systematically have a higher shot at the lead role, regardless of the genre of the movie, with some contrasts depending upon which movie genre we look at. For example, for action movies, men are far more likely to have the lead role than women, whereas in drama movies, this difference is less pronounced.
+							</p>
+							<p>To dig a little deeper, we used statistical methods (chi square test) to determine if the correlation between the gender of the lead role and the genre of a movie exists. And if so, to which extent. 
+							The correlation between the two was found to be significant. 								
+							Without any correlation between the gender of the lead role and movies genre, men are expected to lead ≃ 75% of movies of all genres and women are expected to lead ≃ 25% of movies across all genres (because men are generally occupy the main role in movies more often than women overall). These are called the expected frequencies.
+							</p>
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/37/" height="500" width="1000"></iframe>
+							<p>However, the observed values differ from this prediction. Here are the observed frequencies.
+							</p>
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/39/" height="500" width="1000"></iframe>
+							<p>Let us visualize the difference between the observed and expected frequencies here:
+							</p>
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/41/" height="500" width="1000"></iframe>
+							<p>	The following observations can be made: </p>
+							<ul>
+								<li> <b>Drama Films:</b> In Drama films, women occupy the lead role ≃ 35% of the time and men ≃ 65% of the time. Compared with the expected values, this means American cinema is more likely to choose women as lead roles in Drama movies than men.					
+								</li>
+								<li> <b>Action Films:</b> In Action films, men occupy the lead role more than 90% of the time while women occupy it less than 10% of the time. Comparing this to the expected values, American cinema is more likely to choose men as their lead role in action movies than average.
+								</li>
+								<li> <b>Horror Films:</b> Horror films seem to do the best in terms of gender distribution of main roles. Women occupy the lead role 44% of the tie while men occupy it 55% of the time. Comparing this to the expected values, Horror movies are much more likely to portray women than men compared to average.
+								</li>
+							</ul>
 						</div>
 						<div class="image">
 							<img src="images/yellow.png" alt="" />
@@ -99,9 +131,8 @@
 				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
 					<div class="content">
 						<h2>Revenue</h2>
-						<p>As seen earlier, women make up a very small portion of writers and directors and the minority of main characters. Maybe it is because movies created by women or portraying them are less successful ? The CMU Movies dataset contains reliable revenue information. Hence, we studied the difference in the revenue for movies created by women or portraying them. It would be best to have a balanced dataset to do statistical tests. Hence a matching procedure on the budget, year of release, score and the genre of the movie has been done. As you can see in the following graphs, these features can have a big impact on the revenue. Budget is significantly correlated to revenue but not to the gender of the crew 				
+						<p>As seen earlier, women make up a very small portion of writers and directors and the minority of main characters. Maybe it is because movies created by women or portraying them are less successful ? The CMU Movies dataset contains reliable revenue information. Hence, we studied the difference in the revenue for movies created by women or portraying them. It would be best to have a balanced dataset to do statistical tests. Hence a matching procedure on the budget, year of release, score and the genre of the movie has been done. 
 						</p>
-						<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/19/" height="500" width="1000"></iframe>
 					</div>
 					<div class="image">
 						<img src="images/yellow.png" alt="" />
@@ -112,9 +143,36 @@
 				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
 					<div class="content">
 						<h3>In terms of main character gender</h3>
-						<p>			
+						<p>	We know that men are far more likely to play the lead role in American movies. Now let’s see if there is a noticeable difference in the revenue of a movie based on the gender of its protagonist. Do movies portraying men make more than movies portraying women? 		
 						</p>
-
+						<p> If we first look at our raw dataset, movies portraying women gross about 58’000’000 USD, and movies portraying men gross about 85’000’000 USD. This suggests that movies portraying women earn 68% less at the box office…
+						</p>
+						<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/53/" height="500" width="1000"></iframe>
+						<p>
+							The difference forementioned is statistically significant. However, does this difference really solely have to do with the gender of the protagonist? 
+							Other hidden factors could be behind this difference, as shown earlier, we know that women are more likely to star in Horror, Drama and Comedy movies, but less likely to star in Action, Crime, or Animation movies.  So this difference in revenue might actually come from the fact that men and women don’t star in the same kind of movies. Maybe movies starring men make more just because Action movies make more? 
+						</p>
+						<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/61/" height="500" width="1000"></iframe>
+						<p>
+							The difference observed could also be due to the budget of the movie. Movies with higher budgets earn higher revenue. And as we can see, movies with male protagonists start with a higher budget than those with a female protagonist. This could be another confounding factor in your analysis. 
+						</p>
+						<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/59/" height="500" width="1000"></iframe>
+						<p>
+							The difference could also be due to the year of release of a movie. Movies released more recently have a higher budget and hence a higher revenue. And as we can see, women are more likely to star in recent films and than older films. This factor could have a difference in our analysis as well. 
+						</p>
+						<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/57/" height="500" width="1000"></iframe>
+						<p>
+							The difference in revenue could also be due to the score of the movie in question. As we can see, movies starring men often have a bit higher score than movies starring women. 
+						</p>
+						<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/55/" height="500" width="1000"></iframe>
+						<p> 
+							So in order to do this analysis properly, we have to compare movies starring men and women with the same genre, similar budget, score and year of release to determine whether or not gender of the protagonist in itself has an effect on an American movie’s earnings.
+							Once these parameters are adjusted, we see that it is actually the opposite. After balancing the factors mentioned before (using propensity score matching), it turns out that hiring a woman for the starring role might actually make you more money than hiring a man!
+						</p>
+						<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/63/" height="500" width="1000"></iframe>
+						<p> 
+							Movies starring women make 69 million USD on average and movies starring men make 62 million dollars on average. That’s 11% more and statistically significant.
+						</p>
 					</div>
 					<div class="image">
 						<img src="images/yellow.png" alt="" />
@@ -127,7 +185,7 @@
 						<h3>In terms of the gender crew</h3>
 						<p>First, with raw distributions of revenue, movies made by a mixed crew do not seem to have smaller revenue, even though the highest grossing ones are made by men.  
 						</p>
-						<p>After matching, with a balanced dataset, the distributions have slightly changed. Indeed, the highest grossing movie is now created by a crew containing a woman. However, statistical show that we cannot reject the hypothesis that the distributions are different (Mann-Whitney U p-value of 0.9).
+						<p>After the same matching procedure as before, with a balanced dataset, the distributions have slightly changed. Indeed, the highest grossing movie is now created by a crew containing a woman. However, statistical show that we cannot reject the hypothesis that the distributions are different (Mann-Whitney U p-value of 0.9).
 						</p>
 						<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/21/" height="500" width="1000"></iframe>
 						<p>So, women do make successful movies, the reason for their absence in crews must come from something else. 
