@@ -67,14 +67,15 @@
 								We used some Natural Language Processing tools to analyze movie summaries. These tools can understand the names of characters and other words that describe them. We also extended the dataset with information about the gender and ethnicity of the characters. Then, we looked at which words were most commonly used to describe characters in different groups. 
 							</p> 					
 							<p>This is a word cloud of the most common words used to describe men and women :</p>
-							<img src="images/gender_wordcloud_male.png" alt="" />
-							<img src="images/gender_wordcloud_female.png" alt="" />
+							
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="images/gender_wordcloud.png" height="500" width="1000"></iframe>
+							
 							<p>These words were grouped in different corresponding lexical fields :	</p>
 							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/102/" height="2500" width="1000"></iframe>
 							<p> 
 								As the most used lexical fields appear to be common for masculine and feminine characters, let’s compare the top 15 lexical fields to better see the differences in a Venn diagram :
 							</p>
-							<img src="images/gender-venn.png" alt="" />
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="images/gender_venn.png" height="500" width="1000"></iframe>
 							<p> 
 								Most of the top lexical fields are common to the two genders, but the exclusive ones are quite striking : men are more associated with violent behavior words, while women are more associated with caring words.
 							</p>
@@ -106,14 +107,14 @@
 							<p>
 								Next, the same anaylsis as before has been done but on the ethnicity of the characters. However, the categories had to be divided in ‘White’ and ‘Non-white’ to obtain accurate results, as all other ethnicities were far less represented.
 							</p>
-							<img src="images/ethnicity_wordcloud_white.png" alt="" />
-							<img src="images/ethnicity_wordcloud_nonwhite.png" alt="" />
-							
+
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="images/ethnicity_wordcloud.png" height="500" width="1000"></iframe>
+														
 							<p> As for genders, the most important lexical fields were drawn for the two categories :</p>
 							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/108/" height="500" width="1000"></iframe>
 							<p> At first, the most common lexical fields seem quite similar, with both groups sharing the top three lexical fields that are speaking, communication and traveling.</p>
 							<p>The differences between the top 15 lexical fields were plotted in this Venn diagram :</p>
-							<img src="images/ethnicities_venn.png" alt="" />
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="images/ethnicities_venn.png" height="500" width="1000"></iframe>
 							<p>
 								Again, most of the top lexical fields are common to both groups. For white characters, the exclusive fields seem surprising, being ‘dispute’, ‘wedding’ and ‘pain’. For Non-whites, criminal lexical fields appear to be characteristic.
 							</p>
