@@ -98,9 +98,7 @@
 							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/106/" height="2500" width="1500"></iframe>						
 						</div>
 					</section>		
-										
-					
-
+									
 				<!-- Two b -->
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
@@ -146,7 +144,7 @@
 						</div>
 					</section>	
 				
-				<!-- Three -->
+				<!-- Three a-->
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
 							<h2>Are movies genres and gender of the lead role related?</h2>
@@ -187,8 +185,44 @@
 						</div>
 					</section>
 
+				<!-- Three b-->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+						<div class="content">
+							<h2>Are movies genres and ethnicity of the lead role related?</h2>
+							<p> 
+								Let us first look at how many actors there are by movie genre for each ethnicity. A first look at our data (in logarithmic scale) shows that white actors are more likely to star in the lead role regardless of the movie genre. The plot also suggests that depending on your ethnicity you might be more or less likely to star in a specific movie genre. For example, native americans seem to be very likely to star in action movies. 
+							</p>
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/81/" height="500" width="1000"></iframe>
+							
+							<p>
+								To dig a little deeper, we used statistical analysis methods. The dependence between the ethnicity of the protagonist and the genre of the movie was found to be significant.
+								As in the previous section, the normalized values of the expected (number of lead roles per ethnicity of actor and movie genre if the two were independent) and observed frequencies (number of lead roles per ethnicity of actor and movie genre actually observed in data) are compared. The difference between the observed and expected frequencies is also visualized in a plot.
+								Without any correlation between the ethnicity of the lead role and movies genre, white actors are expected to lead more than 90% of movies of all genres and others are expected to lead less than 10% of movies combined  (because white actors generally occupy the main role in movies overall).
+							</p>
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/46/" height="500" width="1000"></iframe>
+							
+							<p> 
+								However, the observed values differ a bit from this prediction. 
+							</p>
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/84/" height="500" width="1000"></iframe>
+						
+							<p> 
+								Looking at the difference plot, native americans are more likely to be chosen as the lead role for action movies than white actors compared to average frequencies. Biographical movies are more likely to be made about non white people compared to average frequencies. 
+							</p>
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/86/" height="500" width="1000"></iframe>
+						
+							<p> 
+								<b>Remark:</b> It is worth noting that black actors appear very rarely in any leading roles in American cinema according to our data, even though they are the most populous ethnicity in the USA after caucasian peoples. In addition to the known lack of african american representation in american cinema, this can also be due to the dataset used. Some movies in our dataset were discarded due to unavailability of information on the ethnicity of the lead actor. 
+
+							</p>
+						</div>
+						<div class="image">
+							<img src="images/yellow.png" alt="" />
+						</div>
+					</section>
+
 				<!-- Four -->
-				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
 					<div class="content">
 						<h2>Proportion of women in the crew </h2>
 						<p>Next, let’s look at the proportion of women writers and directors. There are a lot of directors and writers for one movie. In the dataset used, 94.02 % of movies were directed and 95.80 % written by only men. There were no movies that were written or directed by only women. If we merge the crew information, there are 7.78 % movies that have at least one woman in the crew.
@@ -202,7 +236,7 @@
 				</section>
 
 				<!-- Five  -->
-				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
+				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 					<div class="content">
 						<h2>Revenue</h2>
 						<p>As seen earlier, women make up a very small portion of writers and directors and the minority of main characters. Maybe it is because movies created by women or portraying them are less successful ? The CMU Movies dataset contains reliable revenue information. Hence, we studied the difference in the revenue for movies created by women or portraying them. It would be best to have a balanced dataset to do statistical tests. Hence a matching procedure on the budget, year of release, score and the genre of the movie has been done. 
@@ -214,7 +248,7 @@
 				</section>
 
 				<!-- Five a -->
-				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
+				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 					<div class="content">
 						<h3>In terms of main character gender</h3>
 						<p>	We know that men are far more likely to play the lead role in American movies. Now let’s see if there is a noticeable difference in the revenue of a movie based on the gender of its protagonist. Do movies portraying men make more than movies portraying women? 		
@@ -273,8 +307,12 @@
 						<div class="inner">
 							<h2> Conlusion </h2>
 							<p>
-
-							</p>
+							In this project, interesting biases have been found in the representation of genders and ethinicities in movies. 
+							To begin, male characters are more associated with violence. domination and geeks, while women are more associated with their sexuality, emotions, appearance and caring capability.	
+							Most plots are about men. Moreover, characters of color are more represented in plots than white people but mainly with a negative or stereotypical vocubulary that refer to mysticism, artistry and incivilities. The vocabulary fields thare are white biased refer to ore positive actions such as wedding, travel, family or meeting.
+							Then, there are less female main characters, 25% on average, with some variations with movies genres. This can be linked to the grossing of movies starring men, that is 11% higher than those starring a woman. White actors and actresses represent 90% of main characters. 
+							Finally, only 7% of movies have a woman writter or director in their crew. This trend is stationnary since 1985. However, revenue of movies with a mixed crew are not statistically different from those created by men only. 
+						</p>
 						</div>
 					</section>
 
