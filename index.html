@@ -67,52 +67,38 @@
 								We used some Natural Language Processing tools to analyze movie summaries. These tools can understand the names of characters and other words that describe them. We also extended the dataset with information about the gender and ethnicity of the characters. Then, we looked at which words were most commonly used to describe characters in different groups. 
 							</p> 					
 							<p>This is a word cloud of the most common words used to describe men and women :</p>
-							<p>These words were grouped in different corresponding lexical fields :	</p>
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="images/gender_wordcloud_row.png" height="500" width="1000"></iframe>
+							
+							<p> As the most used lexical fields appear to be common for masculine and feminine characters, let’s compare the top 15 lexical fields to better see the differences in the following Venn diagram. Most of the top lexical fields are common to the two genders, but the exclusive ones are quite striking : men are more associated with violent behavior words, while women are more associated with caring words.
+							</p>
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="images/gender_venn.png" height="500" width="500"></iframe>
+							
+							
+							<p>These words were grouped in different corresponding lexical fields.	</p>
+							<p>
+								Since the fields are ordered from most biased to least biased towards each gender, the first lexical fields could be described as clichés in American cinema. Men’s clichés are to be geeks, violent, dominant even, while women’s clichés are to be good-looking, emotional, and sexual.
+							</p>
+							<p>
+								The lexical fields can then be ordered again by importance, while keeping the bias towards each gender.
+							</p>
+							<p>
+								While the left plot captures the absolute bias of the most important lexical fields, the right plot takes the rolling mean of biases. The fact that the rolling mean stays in the male zone for the most common lexical fields tends to indicate that the plots are mostly written about men, for the better and for the worse. This is consistent with the other findings of the study.
+							</p>	
+
 						</div>	
 						<div class="image">
-							<img src="images/gender_wordcloud.png" alt="" />							
+							<img src="images/yellow.png" alt="" />							
 						</div>
 					</section>
 
 					<section class="wrapper style1 align-center" id="start">
 						<div class="inner">			
-							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/102/" height="2500" width="1500"></iframe>
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/102/" height="697" width="1500"></iframe>
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/104/" height="1500" width="1500"></iframe>
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/106/" height="3000" width="1500"></iframe>						
 						</div>
-					</section>
-										
-					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
-						<div class="content">
-							<p> 
-								As the most used lexical fields appear to be common for masculine and feminine characters, let’s compare the top 15 lexical fields to better see the differences in a Venn diagram :
-							</p>
-							<p> 
-								Most of the top lexical fields are common to the two genders, but the exclusive ones are quite striking : men are more associated with violent behavior words, while women are more associated with caring words.
-							</p>
-							<p>
-								To try and see the differences further, every lexical field was compared between men and women to see which fields are used more for one than for the other :
-							</p>
-							</div>	
-							<div class="image">
-								<img src="images/gender_venn.png" alt="" />							
-							</div>
-						</section>	
-							
-					<section class="wrapper style1 align-center" id="start">
-						<div class="inner">	
-							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/104/" height="2500" width="1500"></iframe>
-							<p>
-								Since the fields are ordered from most biased to least biased towards each gender, the first lexical fields could be described as clichés in American cinema. Men’s clichés are to be geeks, violent, dominant even, while women’s clichés are to be good-looking, emotional, and sexual.
-							</p>
-							<p>
-								The lexical fields can then be ordered again by importance, while keeping the bias towards each gender :
-							</p>
-							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/106/" height="2500" width="1500"></iframe>
-							<p>
-								While the left plot captures the absolute bias of the most important lexical fields, the right plot takes the rolling mean of biases. The fact that the rolling mean stays in the male zone for the most common lexical fields tends to indicate that the plots are mostly written about men, for the better and for the worse. This is consistent with the other findings of the study.
-							</p>							
-							</div>
-					</section>
-
+					</section>		
+									
 				<!-- Two b -->
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
@@ -122,17 +108,14 @@
 								Next, the same anaylsis as before has been done but on the ethnicity of the characters. However, the categories had to be divided in ‘White’ and ‘Non-white’ to obtain accurate results, as all other ethnicities were far less represented.
 							</p>
 
-							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="images/ethnicity_wordcloud.png" height="500" width="1000"></iframe>
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="images/ethnicity_wordcloud_row.png" height="500" width="1000"></iframe>
 														
 							<p> As for genders, the most important lexical fields were drawn for the two categories :</p>
-							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/108/" height="2500" width="1500"></iframe>
 							<p> At first, the most common lexical fields seem quite similar, with both groups sharing the top three lexical fields that are speaking, communication and traveling.</p>
-							<p>The differences between the top 15 lexical fields were plotted in this Venn diagram :</p>
-							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="images/ethnicity_venn.png" height="500" width="1000"></iframe>
-							<p>
-								Again, most of the top lexical fields are common to both groups. For white characters, the exclusive fields seem surprising, being ‘dispute’, ‘wedding’ and ‘pain’. For Non-whites, criminal lexical fields appear to be characteristic.
+							<p>The differences between the top 15 lexical fields were plotted in a Venn diagram. Again, most of the top lexical fields are common to both groups. For white characters, the exclusive fields seem surprising, being ‘dispute’, ‘wedding’ and ‘pain’. For Non-whites, criminal lexical fields appear to be characteristic.
 							</p>
-							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/110/" height="2500" width="1500"></iframe>
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="images/ethnicity_venn.png" height="500" width="500"></iframe>
+							
 							<p>
 								Non-white biased lexical fields are mostly negatively connotated. They can be arranged in stereotypical themes : 
 								<ul>
@@ -143,7 +126,6 @@
 								Notably, the field ‘feminine’ is high in the white-biased lexical fields, while ‘blue_collar_job’ is the second most non-white-biased field.
 							</p>
 							<p>When ordering by lexical field importance, the results are more surprising :</p>
-							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/112/" height="2500" width="1500"></iframe>
 							<p>
 								Indeed, looking at the plot on the right, the top fields are mostly in the non-white zone, but they are also quite negative: on the left plot, the most important fields that are non-white biased are ‘negative_emotion’, ‘fight’, ‘kill’ and ‘violence’, ‘aggression’ and ‘crime’. All The While, the top fields that are white-biased are way more positive, with ‘traveling’, ‘meeting’, ‘giving’, ‘family’ but also ‘dispute’. This strongly shows that American cinema depicts non-white people negatively, but also very often so.
 								Unfortunately, movie summaries did not provide enough text to make a reliable time-series analysis for both gender and ethnicities, and stereotypical characters couldn’t be derived as some ethnicities were not represented enough.
@@ -153,8 +135,16 @@
 							<img src="images/yellow.png" alt="" />							
 						</div>
 					</section>
+
+					<section class="wrapper style1 align-center" id="start">
+						<div class="inner">			
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/108/" height="2500" width="1500"></iframe>
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/110/" height="2500" width="1500"></iframe>
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/112/" height="2500" width="1500"></iframe>
+						</div>
+					</section>	
 				
-				<!-- Three -->
+				<!-- Three a-->
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
 							<h2>Are movies genres and gender of the lead role related?</h2>
@@ -195,22 +185,58 @@
 						</div>
 					</section>
 
+				<!-- Three b-->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+						<div class="content">
+							<h2>Are movies genres and ethnicity of the lead role related?</h2>
+							<p> 
+								Let us first look at how many actors there are by movie genre for each ethnicity. A first look at our data (in logarithmic scale) shows that white actors are more likely to star in the lead role regardless of the movie genre. The plot also suggests that depending on your ethnicity you might be more or less likely to star in a specific movie genre. For example, native americans seem to be very likely to star in action movies. 
+							</p>
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/81/" height="500" width="1000"></iframe>
+							
+							<p>
+								To dig a little deeper, we used statistical analysis methods. The dependence between the ethnicity of the protagonist and the genre of the movie was found to be significant.
+								As in the previous section, the normalized values of the expected (number of lead roles per ethnicity of actor and movie genre if the two were independent) and observed frequencies (number of lead roles per ethnicity of actor and movie genre actually observed in data) are compared. The difference between the observed and expected frequencies is also visualized in a plot.
+								Without any correlation between the ethnicity of the lead role and movies genre, white actors are expected to lead more than 90% of movies of all genres and others are expected to lead less than 10% of movies combined  (because white actors generally occupy the main role in movies overall).
+							</p>
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/46/" height="500" width="1000"></iframe>
+							
+							<p> 
+								However, the observed values differ a bit from this prediction. 
+							</p>
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/84/" height="500" width="1000"></iframe>
+						
+							<p> 
+								Looking at the difference plot, native americans are more likely to be chosen as the lead role for action movies than white actors compared to average frequencies. Biographical movies are more likely to be made about non white people compared to average frequencies. 
+							</p>
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/86/" height="500" width="1000"></iframe>
+						
+							<p> 
+								<b>Remark:</b> It is worth noting that black actors appear very rarely in any leading roles in American cinema according to our data, even though they are the most populous ethnicity in the USA after caucasian peoples. In addition to the known lack of african american representation in american cinema, this can also be due to the dataset used. Some movies in our dataset were discarded due to unavailability of information on the ethnicity of the lead actor. 
+
+							</p>
+						</div>
+						<div class="image">
+							<img src="images/yellow.png" alt="" />
+						</div>
+					</section>
+
 				<!-- Four -->
-				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
 					<div class="content">
 						<h2>Proportion of women in the crew </h2>
-						<p>Next, let’s look at the proportion of women writers and directors. There are a lot of directors and writers for one movie. In the dataset used, 94, 02 % of movies were directed and 95,80 % written by only men. There were no movies that were written or directed by only women. If we merge the crew information, there are 7,78 % movies that have at least one woman in the crew.
+						<p>Next, let’s look at the proportion of women writers and directors. There are a lot of directors and writers for one movie. In the dataset used, 94.02 % of movies were directed and 95.80 % written by only men. There were no movies that were written or directed by only women. If we merge the crew information, there are 7.78 % movies that have at least one woman in the crew.
 						</p>
 						<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/13/" height="500" width="1000"></iframe>
-						<p>Thus, with no surprise, the distributions of movies created by only men or by a crew containing at least one women are significantly different (Mann-Whitney p-value of 5e-20). Moreover, even if the proportion of women in movie crews has change since the 1920’s, is has been stationnary since 1985 (AD Fuller p-value of 0.0002). </p>
+						<p>Thus, with no surprise, the distributions of movies created by only men or by a crew containing at least one women are significantly different (Mann-Whitney p-value of 5e-20). Moreover, even if the proportion of women in movie crews has changed since the 1920’s, is has been stationnary since 1985 (AD Fuller p-value of 0.0002). </p>
 					</div>
 					<div class="image">
 						<img src="images/yellow.png" alt="" />
 					</div>
 				</section>
 
-				<!-- Five a -->
-				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
+				<!-- Five  -->
+				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 					<div class="content">
 						<h2>Revenue</h2>
 						<p>As seen earlier, women make up a very small portion of writers and directors and the minority of main characters. Maybe it is because movies created by women or portraying them are less successful ? The CMU Movies dataset contains reliable revenue information. Hence, we studied the difference in the revenue for movies created by women or portraying them. It would be best to have a balanced dataset to do statistical tests. Hence a matching procedure on the budget, year of release, score and the genre of the movie has been done. 
@@ -221,8 +247,8 @@
 					</div>
 				</section>
 
-				<!-- Five b -->
-				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
+				<!-- Five a -->
+				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 					<div class="content">
 						<h3>In terms of main character gender</h3>
 						<p>	We know that men are far more likely to play the lead role in American movies. Now let’s see if there is a noticeable difference in the revenue of a movie based on the gender of its protagonist. Do movies portraying men make more than movies portraying women? 		
@@ -233,7 +259,6 @@
 							The difference forementioned is statistically significant. However, does this difference really solely have to do with the gender of the protagonist? 
 							Other hidden factors could be behind this difference, as shown earlier, we know that women are more likely to star in Horror, Drama and Comedy movies, but less likely to star in Action, Crime, or Animation movies.  So this difference in revenue might actually come from the fact that men and women don’t star in the same kind of movies. Maybe movies starring men make more just because Action movies make more? 
 						</p>
-						<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/61/" height="500" width="1000"></iframe>
 						<p>
 							The difference observed could also be due to the budget of the movie. Movies with higher budgets earn higher revenue. And as we can see, movies with male protagonists start with a higher budget than those with a female protagonist. This could be another confounding factor in your analysis. 
 						</p>
@@ -260,13 +285,13 @@
 					</div>
 				</section>
 
-				<!-- Five c -->
+				<!-- Five b -->
 				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
 					<div class="content">
 						<h3>In terms of the gender crew</h3>
-						<p>First, with raw distributions of revenue, movies made by a mixed crew do not seem to have smaller revenue, even though the highest grossing ones are made by men.  
+						<p>First, with the raw distribution of revenue, movies made by a mixed crew do not seem to have smaller revenue, even though the highest grossing ones are made by men.  
 						</p>
-						<p>After the same matching procedure as before, with a balanced dataset, the distributions have slightly changed. Indeed, the highest grossing movie is now created by a crew containing a woman. However, statistical show that we cannot reject the hypothesis that the distributions are different (Mann-Whitney U p-value of 0.9).
+						<p>After the same matching procedure as before, with a balanced dataset, the distributions have slightly changed. Indeed, the highest grossing movie is now created by a crew containing a woman. However, statistical tests show that we cannot reject the hypothesis that the distributions are different (Mann-Whitney U p-value of 0.9).
 						</p>
 						<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~DataSIEences/21/" height="500" width="1000"></iframe>
 						<p>So, women do make successful movies, the reason for their absence in crews must come from something else. 
@@ -282,8 +307,12 @@
 						<div class="inner">
 							<h2> Conlusion </h2>
 							<p>
-
-							</p>
+							In this project, interesting biases have been found in the representation of genders and ethinicities in movies. 
+							To begin, male characters are more associated with violence. domination and geeks, while women are more associated with their sexuality, emotions, appearance and caring capability.	
+							Most plots are about men. Moreover, characters of color are more represented in plots than white people but mainly with a negative or stereotypical vocubulary that refer to mysticism, artistry and incivilities. The vocabulary fields thare are white biased refer to ore positive actions such as wedding, travel, family or meeting.
+							Then, there are less female main characters, 25% on average, with some variations with movies genres. This can be linked to the grossing of movies starring men, that is 11% higher than those starring a woman. White actors and actresses represent 90% of main characters. 
+							Finally, only 7% of movies have a woman writter or director in their crew. This trend is stationnary since 1985. However, revenue of movies with a mixed crew are not statistically different from those created by men only. 
+						</p>
 						</div>
 					</section>
 
@@ -291,7 +320,7 @@
 				<!-- Footer -->
 					<footer class="wrapper style1 align-center">
 						<div class="inner">
-							
+								<b>Authors:</b> Pierre Creusot, Léo Jacquat, Esha Sharma, Julia Wälti 
 						</div>
 					</footer>
 
